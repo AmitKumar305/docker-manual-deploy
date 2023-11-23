@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  docker-app:
+    image: amit305/docker-manual-deploy:main
+    container_name: 'docker-app'
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=8080
+  
