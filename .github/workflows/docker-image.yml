@@ -26,6 +26,6 @@ jobs:
         echo "Authenticating docker"
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         echo "Building docker image"
-        docker build -t amit305/docker-manul-deploy:${GITHUB_REF##*/} .
+        docker build -t amit305/docker-manual-deploy:${GITHUB_REF##*/} .
         echo "Pushing the amit305/docker-manual-deploy:${GITHUB_REF##*/} to the Docker"
         docker push amit305/docker-manual-deploy:${GITHUB_REF##*/}
